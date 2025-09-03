@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin-block: 1.5rem;
+}
+
+.class {
+    text-decoration: underline;
+}
+
+#id {
+    font-family: monospace;
+}
+
+li:has(a) {
+    display: flex;
+}
+
+
+
+header h1 {
+    color: darkblue;
+}
+
+
+header > h1 {
+
+    font-size: 2.5rem;
+}
+
+
+h1 ~ p {
+ 
+    color: darkgreen;
+}
+
+
+h1 + p {
+
+    font-weight: bold;
+}
+
+
+h1, p {
+ 
+    font-family: Arial, sans-serif;
+}
+
+
+
+.grid-ejercicio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    background: #faeee5;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid-ejercicio > * {
+    background: rgb(242, 242, 242);
+    border: 2px solid #888;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.grid-ejercicio img {
+    max-width: 90%;
+    max-height: 80px;
+    object-fit: contain;
+    background: white;
+    border: none;
+}
+
+/* Hace que los elementos con la clase 'wide' ocupen dos columnas */
+.grid-ejercicio .wide {
+    grid-column: span 2;
+}
